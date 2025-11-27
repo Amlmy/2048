@@ -127,8 +127,8 @@ class Game2048(tk.Frame):
             self.save_best_score() # 记录新的最高分
             
         self.game_running = False
-        message = "You Won! 🎉" if win else "Game Over! 😭"
-        messagebox.showinfo("2048 Game", message)
+        message = "You Won!" if win else "Game Over!"
+        messagebox.showinfo("2048 Game", message, parent=self.master)
 
     def undo_action(self):
         """处理撤销按钮点击事件。"""
