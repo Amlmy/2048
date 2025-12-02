@@ -1,0 +1,23 @@
+/* 新方块出现的动画 */
+.new-tile {
+  animation: pop-in 0.25s ease-out;
+}
+@keyframes pop-in {
+  0% { transform: scale(0.3); opacity: 0.3; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* 合并动画 */
+.merge {
+  animation: merge-scale 0.2s ease-out;
+}
+@keyframes merge-scale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+/* 预留移动动画 class（当前主要用出现 & 合并动画）*/
+.moving {
+  transition: transform 0.12s ease;
+}

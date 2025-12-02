@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 让整体页面居中显示 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 主题下只控制背景和字体颜色 */
+body.light {
+  background: #faf8ef;
+  color: #776e65;
+}
+body.dark {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+/* 容器居中+适当阴影 */
+.container {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.score-board {
+  display: flex;
+  gap: 10px;
+}
+
+.score-box {
+  background: #bbada0;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.score-label {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.score-value {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.controls {
+  margin-top: 15px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 15px;
+  background: #8f7a66;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:active {
+  transform: translateY(1px);
+  opacity: 0.9;
+}
+
+.game-container {
+  width: 400px;
+  height: 400px;
+  background: var(--grid-bg);
+  margin-top: 20px;
+  border-radius: 10px;
+  position: relative;
+  padding: 10px;
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.cell {
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  opacity: 1;
+}
+
+/* 空格 */
+.cell-0 {
+  background: var(--cell-empty);
+}
+
+/* 数字方块 */
+.cell-2 { background: #eee4da; color: #776e65; }
+.cell-4 { background: #ede0c8; color: #776e65; }
+.cell-8 { background: #f2b179; color: #f9f6f2; }
+.cell-16 { background: #f59563; color: #f9f6f2; }
+.cell-32 { background: #f67c5f; color: #f9f6f2; }
+.cell-64 { background: #f65e3b; color: #f9f6f2; }
+.cell-128 { background: #edcf72; color: #f9f6f2; font-size: 26px; }
+cell-256 { background: #edcc61; color: #f9f6f2; font-size: 26px; }
+.cell-256 { background: #edcc61; color: #f9f6f2; font-size: 26px; }
+.cell-512 { background: #edc850; color: #f9f6f2; font-size: 26px; }
+.cell-1024 { background: #edc53f; color: #f9f6f2; font-size: 22px; }
+.cell-2048 { background: #edc22e; color: #f9f6f2; font-size: 22px; }
+
+/* 覆盖层 */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(238, 228, 218, 0.7);
+  border-radius: 10px;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+@media (max-width: 480px) {
+  .game-container {
+    width: 320px;
+    height: 320px;
+  }
+  .title {
+    font-size: 36px;
+  }
+}

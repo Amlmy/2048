@@ -1,0 +1,19 @@
+/* 亮色主题 */
+body.light {
+  --grid-bg: #bbada0;
+  --cell-empty: #cdc1b4;
+}
+
+/* 暗色主题 */
+body.dark {
+  --grid-bg: #2b2b2b;
+  --cell-empty: #3d3d3d;
+}
+
+body.dark .btn {
+  background: #666;
+}
+
+body.dark .score-box {
+  background: #444;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <title>2048 Plus With Sound</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animation.css">
+  <link rel="stylesheet" href="themes.css">
+</head>
+<body class="light">
+
+<div class="container">
+  <div class="header">
+    <div class="title">2048+</div>
+
+    <div class="score-board">
+      <div class="score-box">
+        <div class="score-label">得分</div>
+        <div id="score" class="score-value">0</div>
+      </div>
+      <div class="score-box">
+        <div class="score-label">最高分</div>
+        <div id="best" class="score-value">0</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="btn-group">
+      <button id="undoBtn" class="btn">撤销</button>
+      <button id="restartBtn" class="btn">新游戏</button>
+      <button id="themeBtn" class="btn">切换主题</button>
+    </div>
+  </div>
+
+  <div class="game-container">
+    <div id="overlay" class="overlay">
+      <h2 id="overlayText">游戏结束</h2>
+      <p>再来一局试试？</p>
+      <button id="tryAgainBtn" class="btn">重新开始</button>
+    </div>
+
+    <div id="grid" class="grid"></div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
